@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="main">
+        
+        <h1 id="header"></h1>
+        <form id="pokemon-selector">
+            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif" alt="Blastoise"/>
+            <span> Please </span>
+            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/togepi.gif" alt="Togepi"/> 
+            <span> select</span>
+            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/celebi.gif" alt="Celebi">
+            <span>your</span>
+            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif" alt="Pikachu">
+            <span>Pokemon</span>
+
+            <div id="error-message"></div>
+            <input id="filter-select" placeholder="Enter text to filter" />
+            <select id="pokemon-select" name="pokemon-select">
+                <option value="default">--Choose your Pokemon--</option>
+            </select>
+            <input type="submit" value="Go" />
+        </form>
+        <div id="details">
+            <div>No Pokemon Selected</div>
+        </div>
+        <div id="team">
+            <span id="add-to-team">
+                <button>Add to Team</button>
+            </span>
+            <span id="clear-team">
+                <button>Clear Team</button>
+            </span>
+            <h3>Team</h3>
+            <ul id="team-list">
+                <li id="team-list-placeholder">No Pokémon currently in team</li>
+            </ul>
+            <div id="team-stats">
+                <h4>Team Statistics</h4>
+                <div>Health Points: <span id="team-stats-hp">0</span></div>
+                <div>Attack: <span id="team-stats-atk">0</span></div>
+                <div>Defense: <span id="team-stats-def">0</span></div>    
+            </div>
+        </div>
+        <div id="evolutions">
+            <h3>Evolutions</h3>
+            <div id="evolutions-list"></div>
+        </div>
+        <div id="recent">
+            <h3>Recent</h3>
+            <div id="recent-list"></div>
+        </div>
+        <footer> HEY <img src="wireframes/Dhvg8eNUYAA51GQ.jpeg"></footer>
+    </div>
+    <div id="current-pokemon"></div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+body {
+    background-image: url("/wireframes/game.jpeg")
+}
+#error-message{
+    color:red;
+    font-weight: 600;
+}
+
+#main{
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "selector selector selector"
+        "details details team"
+        "evolutions evolutions evolutions"
+        "recent recent recent"
+        "footer footer footer";
+    grid-gap: 5px;
+    max-width: 800px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#main > *{
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+
+#header{
+    grid-area: header;
+    text-align: center;
+}
+
+#header > * {
+    border: rgb(0, 0, 0);
+}
+
+#pokemon-selector{
+    grid-area: selector;
+}
+
+#details > *{
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+#details{
+    grid-area: details;
+    display: grid;
+    grid-template-areas: 
+        "details-title details-title"
+        "details-img details-text"
+        "details-sub-text details-sub-text";
+    grid-gap: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    #main{
+        grid-template-areas: 
+            "header"
+            "selector"
+            "details"
+            "team"
+            "evolutions"
+            "recent";
+    }
+    #details{
+        grid-template-areas:
+            "details-title"
+            "details-img"
+            "details-text"
+            "details-sub-text";
+    }
+}
+
+#details-title{
+    grid-area: details-title;
+}
+
+#details-img-container{
+    text-align: center;
+}
+
+#details-img-container img{
+    grid-area: details-img;
+    width:150px;
+}
+
+#details-text{
+    grid-area: details-text;
+}
+
+#details-text div {
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+#details-sub-text{
+    grid-area: details-sub-text;
+}
+
+#details-action{
+    grid-area: details-action;
+}
+
+#team{
+    grid-area: team;
+}
+
+ul#team-list{
+    list-style-type: none;
+    padding:0;
+}
+ul#team-list li{
+    margin: 5px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+ul#team-list img{
+    border-radius: 50%;
+    width:50px;
+}
+
+#evolutions{
+    grid-area: evolutions;
+}
+
+#evolutions-list, #recent-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+#evolutions-list > *, #recent-list > *{
+    border: 1px solid black;
+}
+
+#evolutions-list img, #recent-list img{
+    width: 75px;
+}
+
+.evolutions-list-item, .recent-list-item{
+    text-align: center;
+}
+
+.recent-list-item div{
+    cursor: pointer;
+}
+
+
+#recent{
+    grid-area: recent;
+}
+
+footer{
+    grid-area: footer;
+}
+
+footer img {
+    height: 150px;
+    
+}
+
+@keyframes moveElement {
+    0%  {top: 0px;}
+    25%  {top: 10px;}
+    50%  {top: 50px;}
+    75%  {top: 10px;}
+    100%  {top: 0px;}
+}
+
+@keyframes spinElement {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colorElement {
+    0%  {color: rgb(255,0,0);}
+    25% {color: rgb(255, 255, 255)}
+    50%  {color: rgb(71, 71, 114);}
+    75%  {color: rgb(0,0, 255);}
+    100%  {color: rgb(255,0,0);}
+}
